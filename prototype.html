@@ -43,10 +43,11 @@
         }
 
         .teamname {
+            
+            
             font-family: "Jua", sans-serif;
             float: right;
-            padding-top: 60px;
-            padding-right: 250px;
+            padding-left: 0%;
 
         }
 
@@ -169,7 +170,7 @@
         }
 
         .content {
-            width: 70%;
+            width: 55%;
             margin: 2% 0 0 15%;
         }
 
@@ -192,6 +193,8 @@
             justify-content: center;
             align-items: center;
         }
+
+        .tmibox {}
 
         .namebox {
             width: 40%;
@@ -308,7 +311,7 @@
                 <blockquote class="blockquote mb-0">
                     <p>
                     </p>
-                    <footer class="blockquote-footer">${name}<cite title="Source Title">${tmi}</cite></footer>
+                    <footer class="blockquote-footer">${name}<span> :  </span><cite title="Source Title">${tmi}</cite></footer>
                 </blockquote>
             </div>`;
 
@@ -329,12 +332,12 @@
         </div>
     </div>
 
-    <div class="content">
+    <div class="content" >
         <img class="img"
             src="https://raw.githubusercontent.com/leegilhyeon/miniproject/8999c9ba6bcd3feb4df76fce63152a3c59a6ef4b/ddd.jpg"
             alt="">
 
-        <div class="teamname">
+        <span class="teamname" style="text-align: left;">
             <h2 class="simoo">Team.시무11조</h2>
             <li>팀 소개: 선택적 침묵하는 I 5명</li>
             <li>팀 목표: 포기하지말고 끝까지 수료하기</li>
@@ -346,7 +349,7 @@
             <h3 class="rules">팀 규칙</h3>
             <li>대답 꼭하기</li>
             <li>막히는 부분 있다면 물어보기</li>
-        </div>
+        </span>
     </div>
     <div class="mycards" style="text-align: center;">
         <div id="card" class="row row-cols-1 row-cols-md-5 g-5">
