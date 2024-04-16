@@ -60,11 +60,9 @@
         .mycards {
             width: 1800px;
             align-content: center;
-
+            background-color: green;
             margin: 100px auto 0px auto;
             padding-left: 200px;
-
-
         }
 
         .myprofilbox_1 {
@@ -120,11 +118,6 @@
             border-radius: 10px;
             border-style: solid;
             border-color: black;
-        }
-
-
-        .mypostingbox {
-            width: 500px;
         }
 
         .content {
@@ -199,7 +192,7 @@
             $("#profilbox_3").hide();
             $("#profilbox_4").hide();
             $("#profilbox_5").hide();
-            $('#profilbox_1').toggle();
+            $('#profilbox_1').slideToggle();
         })
 
         $("#btn2").click(async function () {
@@ -207,7 +200,7 @@
             $("#profilbox_3").hide();
             $("#profilbox_4").hide();
             $("#profilbox_5").hide();
-            $('#profilbox_2').toggle();
+            $('#profilbox_2').slideToggle();
         })
 
         $("#btn3").click(async function () {
@@ -215,7 +208,7 @@
             $("#profilbox_2").hide();
             $("#profilbox_4").hide();
             $("#profilbox_5").hide();
-            $('#profilbox_3').toggle();
+            $('#profilbox_3').slideToggle();
         })
 
         $("#btn4").click(async function () {
@@ -223,7 +216,7 @@
             $("#profilbox_2").hide();
             $("#profilbox_3").hide();
             $("#profilbox_5").hide();
-            $('#profilbox_4').toggle();
+            $('#profilbox_4').slideToggle();
         })
 
         $("#btn5").click(async function () {
@@ -231,7 +224,7 @@
             $("#profilbox_2").hide();
             $("#profilbox_3").hide();
             $("#profilbox_4").hide();
-            $('#profilbox_5').toggle();
+            $('#profilbox_5').slideToggle();
         })
 
 
