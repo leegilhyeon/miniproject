@@ -13,6 +13,7 @@
 
     <style>
         .main {
+            background-color: #FFFFFF;
             padding: 20px 70px 40px 70px;
             margin: 40px;
         }
@@ -38,7 +39,7 @@
         .teamname {
             float: right;
             padding-top: 60px;
-            padding-right: 90px;
+            padding-right: 250px;
 
         }
 
@@ -50,6 +51,10 @@
         .rules {
             color: rgb(119, 224, 189);
             padding-top: 40px;
+        }
+
+        .out {
+            text-indent: 28%;
         }
 
         .mycards {
@@ -147,7 +152,6 @@
             align-items: center;
         }
 
-
         .tmibox {}
 
         .namebox {
@@ -173,8 +177,6 @@
         const firebaseConfig = {
             apiKey: "AIzaSyBxkEL7CCF9LuLAguqvhE8aV-nkZQBXyrk",
             sauthDomain: "miniproject-8259a.firebaseapp.com",
-            apiKey: "AIzaSyBxkEL7CCF9LuLAguqvhE8aV-nkZQBXyrk",
-            sauthDomain: "miniproject-8259a.firebaseapp.com",
             projectId: "miniproject-8259a",
             storageBucket: "miniproject-8259a.appspot.com",
             messagingSenderId: "196534650912",
@@ -186,8 +188,12 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
+        $("#profilbox_1").hide(); // 처음 개인 프로필 숨기기
+        $("#profilbox_2").hide();
+        $("#profilbox_3").hide();
+        $("#profilbox_4").hide();
+        $("#profilbox_5").hide();
 
-        // 버튼 클릭시 토글
         $("#btn1").click(async function () {
             $("#profilbox_2").hide();
             $("#profilbox_3").hide();
@@ -228,6 +234,7 @@
             $('#profilbox_5').toggle();
         })
 
+
         //TMI로그
         $("#tmibtn").click(async function () {
             let name = $('#name').val();
@@ -238,21 +245,30 @@
                 'name': name,
                 'tmi': tmi
             };
-            await addDoc(collection(db, "miniproject"), doc);
+            await addDoc(collection(db, "miniprojest"), doc);
+            alert('저장완료!');
             window, location.reload();
         });
-
-        let docs = await getDocs(collection(db, "miniproject"));
+        $('#log').empty();
+        let docs = await getDocs(collection(db, "miniprojest"));
         docs.forEach((doc) => {
             let row = doc.data();
             console.log(row);
             let name = row['name'];
             let tmi = row['tmi'];
 
-            let temp_html = `        <div><p>${todos}</p></div>`
+            let temp_html = `
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                    </p>
+                    <footer class="blockquote-footer">${name}<cite title="Source Title">${tmi}</cite></footer>
+                </blockquote>
+            </div>`;
 
-            $('#notdone').append(temp_html);
+            $('#log').append(temp_html);
         });
+
 
     </script>
 </head>
@@ -274,7 +290,11 @@
             <h2 class="simoo">Team.시무11조</h2>
             <li>팀 소개: 선택적 침묵하는 I 5명</li>
             <li>팀 목표: 포기하지말고 끝까지 수료하기</li>
-            <li>팀 약속: 09:10오늘 학습계획 공유하기, 20:30 오늘 학습한 부분 공유하기</li>
+            <li>팀 약속: 09:10 오늘 학습계획 공유하기
+                <p class="out">
+                    20:30 오늘 학습내용 공유하기</p>
+
+            </li>
             <h3 class="rules">팀 규칙</h3>
             <li>대답 꼭하기</li>
             <li>막히는 부분 있다면 물어보기</li>
@@ -284,8 +304,7 @@
         <div id="card" class="row row-cols-1 row-cols-md-5 g-5">
             <div class="col" style="width: 18rem;">
                 <div class="card h-100">
-                    <img src="https://postfiles.pstatic.net/MjAyNDA0MTZfMjQ5/MDAxNzEzMjUzMzAwNjU5.7Qq4I8baRuMfrJM5M4gIPv2kussCfuYpEjvLXmniLQQg.y-4nblYU30b1O13uuXfyaA0t3U7uAl5cr0zrHT_deqAg.PNG/%EC%BA%90%EB%A6%AD%ED%84%B0.png?type=w580"
-                        class="card-img-top" alt="...">
+                    <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">아냐</h5>
                         <p class="card-text">설명</p>
@@ -376,7 +395,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-body">
+            <div id="log" class="card-body">
                 <blockquote class="blockquote mb-0">
                     <p>
                     </p>
@@ -388,8 +407,6 @@
 
     </div>
     </div>
-
-
 
 
 </body>
