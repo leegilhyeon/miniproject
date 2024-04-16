@@ -132,37 +132,42 @@
             border-color: black;
         }
 
-        .myprofilbox_1 > img {
+        .myprofilbox_1>img {
             width: 300px;
             height: 200px;
             margin: 0 0 200px 50px;
         }
 
-        .myprofilbox_2 > img {
+        .myprofilbox_2>img {
             width: 300px;
             height: 200px;
             margin: 0 0 200px 50px;
         }
 
-        .myprofilbox_3 > img {
+        .myprofilbox_3>img {
             width: 300px;
             height: 200px;
             margin: 0 0 200px 50px;
         }
 
-        .myprofilbox_4 > img {
+        .myprofilbox_4>img {
             width: 300px;
             height: 200px;
             margin: 0 0 200px 50px;
         }
 
-        .myprofilbox_5 > img {
+        .myprofilbox_5>img {
             width: 300px;
             height: 200px;
             margin: 0 0 200px 50px;
         }
 
-        
+        .proclose {
+            width: 100px;
+            margin-left: 45%;
+            border-radius: 5px;
+        }
+
         .content {
             width: 70%;
             margin: 2% 0 0 15%;
@@ -266,6 +271,14 @@
             $("#profilbox_3").hide();
             $("#profilbox_4").hide();
             $('#profilbox_5').slideToggle();
+        })
+
+        $("#probtn").click(async function () {
+            $("#profilbox_1").hide();
+            $("#profilbox_2").hide();
+            $("#profilbox_3").hide();
+            $("#profilbox_4").hide();
+            $("#profilbox_5").hide();
         })
 
         //TMI로그
@@ -392,23 +405,33 @@
 
     <div id="profilbox_1" class="myprofilbox_1">
         <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
+        <div><button id="probtn" class="proclose" type="button">닫기</button>
 
+        </div>
     </div>
     <div id="profilbox_2" class="myprofilbox_2">
         <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
+        <div><button id="probtn" class="proclose" type="button">닫기</button>
 
+        </div>
     </div>
     <div id="profilbox_3" class="myprofilbox_3">
         <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
+        <div><button id="probtn" class="proclose" type="button">닫기</button>
 
+        </div>
     </div>
     <div id="profilbox_4" class="myprofilbox_4">
         <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
+        <div><button id="probtn" class="proclose" type="button">닫기</button>
 
+        </div>
     </div>
     <div id="profilbox_5" class="myprofilbox_5">
         <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
+        <div><button id="probtn" class="proclose" type="button">닫기</button>
 
+        </div>
     </div>
 
 
