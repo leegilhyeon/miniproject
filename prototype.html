@@ -35,7 +35,8 @@
         }
 
         .img {
-            max-width: 50%;/* 이미지의 최대사이즈 */
+            max-width: 50%;
+            /* 이미지의 최대사이즈 */
             width: auto;
             height: auto;
             vertical-align: bottom;
@@ -64,14 +65,14 @@
         }
 
         .mycards {
-            max-width: 100%;/* 이미지의 최대사이즈 */
+            max-width: 100%;
+            /* 이미지의 최대사이즈 */
             width: auto;
             height: auto;
             width: 1800px;
+            width: 1400px;
             align-content: center;
-
             margin: 100px auto 0px auto;
-            padding-left: 200px;
 
 
         }
@@ -279,6 +280,8 @@
         });
 
 
+
+
     </script>
 </head>
 
@@ -309,7 +312,7 @@
             <li>막히는 부분 있다면 물어보기</li>
         </div>
     </div>
-    <div class="mycards">
+    <div class="mycards" style="text-align: center;">
         <div id="card" class="row row-cols-1 row-cols-md-5 g-5">
             <div class="col" style="width: 18rem;">
                 <div class="card h-100">
@@ -409,6 +412,7 @@
                     <p>
                     </p>
                     <footer class="blockquote-footer">닉네임 <cite title="Source Title">TMI</cite></footer>
+                    <button id="trash"><i class="fas fa-trash"></i></button>
                 </blockquote>
             </div>
         </div>
