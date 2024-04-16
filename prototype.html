@@ -12,6 +12,8 @@
 
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
         .main {
             background-color: #FFFFFF;
             padding: 20px 70px 40px 70px;
@@ -33,11 +35,17 @@
         }
 
         .img {
-            padding-right: 50px;
+            max-width: 50%;
+            /* 이미지의 최대사이즈 */
+            width: auto;
+            height: auto;
+            vertical-align: bottom;
         }
 
         .teamname {
-            background-color: green;
+            
+            
+            font-family: "Jua", sans-serif;
             float: right;
             padding-left: 0%;
 
@@ -58,12 +66,16 @@
         }
 
         .mycards {
+
+            max-width: 100%;
+            /* 이미지의 최대사이즈 */
+            width: auto;
+            height: auto;
+            width: 1800px;
+
             width: 1400px;
             align-content: center;
-
             margin: 100px auto 0px auto;
-
-
         }
 
         .myprofilbox_1 {
@@ -121,13 +133,38 @@
             border-color: black;
         }
 
-
-        .mypostingbox {
-            width: 500px;
+        .myprofilbox_1 > img {
+            width: 300px;
+            height: 200px;
+            margin: 0 0 200px 50px;
         }
 
+        .myprofilbox_2 > img {
+            width: 300px;
+            height: 200px;
+            margin: 0 0 200px 50px;
+        }
+
+        .myprofilbox_3 > img {
+            width: 300px;
+            height: 200px;
+            margin: 0 0 200px 50px;
+        }
+
+        .myprofilbox_4 > img {
+            width: 300px;
+            height: 200px;
+            margin: 0 0 200px 50px;
+        }
+
+        .myprofilbox_5 > img {
+            width: 300px;
+            height: 200px;
+            margin: 0 0 200px 50px;
+        }
+
+        
         .content {
-            background-color: blue;
             width: 55%;
             margin: 2% 0 0 15%;
         }
@@ -199,7 +236,7 @@
             $("#profilbox_3").hide();
             $("#profilbox_4").hide();
             $("#profilbox_5").hide();
-            $('#profilbox_1').toggle();
+            $('#profilbox_1').slideToggle();
         })
 
         $("#btn2").click(async function () {
@@ -207,7 +244,7 @@
             $("#profilbox_3").hide();
             $("#profilbox_4").hide();
             $("#profilbox_5").hide();
-            $('#profilbox_2').toggle();
+            $('#profilbox_2').slideToggle();
         })
 
         $("#btn3").click(async function () {
@@ -215,7 +252,7 @@
             $("#profilbox_2").hide();
             $("#profilbox_4").hide();
             $("#profilbox_5").hide();
-            $('#profilbox_3').toggle();
+            $('#profilbox_3').slideToggle();
         })
 
         $("#btn4").click(async function () {
@@ -223,7 +260,7 @@
             $("#profilbox_2").hide();
             $("#profilbox_3").hide();
             $("#profilbox_5").hide();
-            $('#profilbox_4').toggle();
+            $('#profilbox_4').slideToggle();
         })
 
         $("#btn5").click(async function () {
@@ -231,9 +268,8 @@
             $("#profilbox_2").hide();
             $("#profilbox_3").hide();
             $("#profilbox_4").hide();
-            $('#profilbox_5').toggle();
+            $('#profilbox_5').slideToggle();
         })
-
 
         //TMI로그
         $("#tmibtn").click(async function () {
@@ -262,7 +298,7 @@
                 <blockquote class="blockquote mb-0">
                     <p>
                     </p>
-                    <footer class="blockquote-footer">${name}<cite title="Source Title">${tmi}</cite></footer>
+                    <footer class="blockquote-footer">${name}<span>:  </span><cite title="Source Title">${tmi}</cite></footer>
                 </blockquote>
             </div>`;
 
@@ -358,18 +394,23 @@
     </div>
 
     <div id="profilbox_1" class="myprofilbox_1">
+        <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
 
     </div>
     <div id="profilbox_2" class="myprofilbox_2">
+        <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
 
     </div>
     <div id="profilbox_3" class="myprofilbox_3">
+        <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
 
     </div>
     <div id="profilbox_4" class="myprofilbox_4">
+        <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
 
     </div>
     <div id="profilbox_5" class="myprofilbox_5">
+        <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
 
     </div>
 
