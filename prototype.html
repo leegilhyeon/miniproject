@@ -78,10 +78,15 @@
             align-items: center;
         }
 
-        .timbox {
-            width: 50px;
+        .tmbox {
             background-color: green;
-            margin: 0px auto 0px auto;
+
+
+        }
+        .namebox {
+            width: 40%;
+            margin: 0 auto;
+            
         }
     </style>
     <script type="module">
@@ -198,33 +203,31 @@
         <div class="mytitle">
             <h1> * 친해져요 우리 * </h1>
         </div>
-        <div id="" class="">
-            <div class="card-header">
-            </div>
-
-
-            <div id="" class="">
-
-                <div class="card-write">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="닉네임" aria-label="Recipient's username"
-                            aria-describedby="button-addon2" id="todos">
-                        <input type="text" class="form-control" placeholder="오늘의 TMI" aria-label="Recipient's username"
-                            aria-describedby="button-addon2" id="todos">
-                        <button class="btn btn-outline-secondary" type="button" id="tmibtn">작성</button>
-                    </div>
+            <div id="namebox" class="namebox">
+                <div class="card-header">
                 </div>
 
 
+                <div id="" class="">
+
+                    <div class="card-write">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="닉네임" aria-label="Recipient's username"
+                                aria-describedby="button-addon2" id="name">
+                            <input type="text" class="form-control" placeholder="오늘의 TMI" aria-label="Recipient's username"
+                                aria-describedby="button-addon2" id="tmi">
+                            <button class="btn btn-outline-secondary" type="button" id="tmibtn">작성</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>
+                        </p>
+                        <footer class="blockquote-footer">닉네임 <cite title="Source Title">TMI</cite></footer>
+                    </blockquote>
+                </div>
             </div>
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>
-                    </p>
-                    <footer class="blockquote-footer">닉네임 <cite title="Source Title">TMI</cite></footer>
-                </blockquote>
-            </div>
-        </div>
     </div>
 
 
