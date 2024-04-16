@@ -27,16 +27,11 @@
         }
 
         .img {
-            float: left;
-            width: 500px;
-            margin: 50px 0px 10px 400px;
+
         }
 
         .teamname {
             float: right;
-            width: 600px;
-            height: 300px;
-            margin: 50px 300px 0px 0px;
         }
 
         .simoo {
@@ -59,6 +54,10 @@
 
         .mypostingbox {
             width: 500px;
+        }
+        .content{
+            width: 70%;
+            margin: 2% 0 0 15%;
         }
     </style>
     <script type="module">
@@ -97,7 +96,7 @@
     <div class="title">
         <h1>빨리 친해지길 바래~</h1>
     </div>
-    <div>
+    <div class="content">
         <img class="img"
             src="https://raw.githubusercontent.com/leegilhyeon/miniproject/8999c9ba6bcd3feb4df76fce63152a3c59a6ef4b/ddd.jpg"
             alt="">
@@ -171,12 +170,14 @@
 
             <div id="postingbox" class="mypostingbox">
                 <div class="card-header">
-                    제목
-                </div>
+                    <input type="email" class="form-control" placeholder="닉네임">
+                                </div>
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
-                        <p>내용</p>
-                        <footer class="blockquote-footer">내용 <cite title="Source Title">내용</cite></footer>
+                        <p><input type="email" class="form-control" placeholder="오늘의 TMI">
+                            <button type="button" class="btn btn-secondary btn-sm">TMI</button>
+                        </p>
+                        <footer class="blockquote-footer">닉네임  <cite title="Source Title">TMI</cite></footer>
                     </blockquote>
                 </div>
             </div>
