@@ -13,8 +13,8 @@
 
     <style>
         .main {
-            background-color: #FFFFFF;
             padding: 20px 70px 40px 70px;
+            margin: 40px;
         }
 
         .title {
@@ -31,7 +31,9 @@
 
         }
 
-        .img {}
+        .img {
+            padding-right: 50px;
+        }
 
         .teamname {
             float: right;
@@ -54,11 +56,67 @@
             width: 1800px;
             align-content: center;
 
-            margin: 250px auto 0px auto;
+            margin: 100px auto 0px auto;
             padding-left: 200px;
 
 
         }
+
+        .myprofilbox_1 {
+            width: 1000px;
+            height: 500px;
+
+            align-content: center;
+            margin: 100px auto 0px auto;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: green;
+        }
+
+        .myprofilbox_2 {
+            width: 1000px;
+            height: 500px;
+
+            align-content: center;
+            margin: 100px auto 0px auto;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: red;
+        }
+
+        .myprofilbox_3 {
+            width: 1000px;
+            height: 500px;
+
+            align-content: center;
+            margin: 100px auto 0px auto;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: blue;
+        }
+
+        .myprofilbox_4 {
+            width: 1000px;
+            height: 500px;
+
+            align-content: center;
+            margin: 100px auto 0px auto;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: yellow;
+        }
+
+        .myprofilbox_5 {
+            width: 1000px;
+            height: 500px;
+
+            align-content: center;
+            margin: 100px auto 0px auto;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: black;
+        }
+
 
         .mypostingbox {
             width: 500px;
@@ -71,9 +129,9 @@
 
         .mytitle {
 
-            width: 40%;
+            width: 30%;
             height: 80px;
-            margin: 20px auto 8px auto;
+            margin: 80px auto 10px auto;
 
 
             background-image: linear-gradient(35deg, #CCFFFF, #FFCCCC);
@@ -90,12 +148,8 @@
         }
 
 
-<<<<<<< HEAD
         .tmibox {}
 
-=======
-        
->>>>>>> b58218ba706772ea0ce6f079286f5580299f605e
         .namebox {
             width: 40%;
             margin: 0 auto;
@@ -103,7 +157,7 @@
         }
 
         .tmibox {
-            width: 1000px;
+            width: 1100px;
             background-color: white;
             margin: 0px auto 0px auto;
         }
@@ -117,13 +171,10 @@
 
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-<<<<<<< HEAD
             apiKey: "AIzaSyBxkEL7CCF9LuLAguqvhE8aV-nkZQBXyrk",
             sauthDomain: "miniproject-8259a.firebaseapp.com",
-=======
-            apiKey: "AIzaSyBxkEL7CCF9LuLAguqvhE8aV-nkZQBXyrk", s
-            authDomain: "miniproject-8259a.firebaseapp.com",
->>>>>>> b58218ba706772ea0ce6f079286f5580299f605e
+            apiKey: "AIzaSyBxkEL7CCF9LuLAguqvhE8aV-nkZQBXyrk",
+            sauthDomain: "miniproject-8259a.firebaseapp.com",
             projectId: "miniproject-8259a",
             storageBucket: "miniproject-8259a.appspot.com",
             messagingSenderId: "196534650912",
@@ -131,23 +182,53 @@
             measurementId: "G-WLC85CK102"
         };
 
-
         // Firebase 인스턴스 초기화
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
 
-
-        $("#btn").click(async function () {
-            let namelist = ["LGH", "PSY", "JGM", "LHW", "HNW"]
-
-
-
-            $('#').toggle();
+        // 버튼 클릭시 토글
+        $("#btn1").click(async function () {
+            $("#profilbox_2").hide();
+            $("#profilbox_3").hide();
+            $("#profilbox_4").hide();
+            $("#profilbox_5").hide();
+            $('#profilbox_1').toggle();
         })
 
-    </script>
-    <script> //TMI로그
+        $("#btn2").click(async function () {
+            $("#profilbox_1").hide();
+            $("#profilbox_3").hide();
+            $("#profilbox_4").hide();
+            $("#profilbox_5").hide();
+            $('#profilbox_2').toggle();
+        })
+
+        $("#btn3").click(async function () {
+            $("#profilbox_1").hide();
+            $("#profilbox_2").hide();
+            $("#profilbox_4").hide();
+            $("#profilbox_5").hide();
+            $('#profilbox_3').toggle();
+        })
+
+        $("#btn4").click(async function () {
+            $("#profilbox_1").hide();
+            $("#profilbox_2").hide();
+            $("#profilbox_3").hide();
+            $("#profilbox_5").hide();
+            $('#profilbox_4').toggle();
+        })
+
+        $("#btn5").click(async function () {
+            $("#profilbox_1").hide();
+            $("#profilbox_2").hide();
+            $("#profilbox_3").hide();
+            $("#profilbox_4").hide();
+            $('#profilbox_5').toggle();
+        })
+
+        //TMI로그
         $("#tmibtn").click(async function () {
             let name = $('#name').val();
             let tmi = $('#tmi').val();
@@ -173,12 +254,11 @@
             $('#notdone').append(temp_html);
         });
 
-
     </script>
 </head>
 
 
-<body style="overflow-x: hidden"> <!-- 가로 스크롤 삭제 -->
+<body>
     <div class="main">
         <div class="title">
             <h1>빨리 친해지길 바래~🌼</h1>
@@ -204,11 +284,12 @@
         <div id="card" class="row row-cols-1 row-cols-md-5 g-5">
             <div class="col" style="width: 18rem;">
                 <div class="card h-100">
-                    <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" class="card-img-top" alt="...">
+                    <img src="https://postfiles.pstatic.net/MjAyNDA0MTZfMjQ5/MDAxNzEzMjUzMzAwNjU5.7Qq4I8baRuMfrJM5M4gIPv2kussCfuYpEjvLXmniLQQg.y-4nblYU30b1O13uuXfyaA0t3U7uAl5cr0zrHT_deqAg.PNG/%EC%BA%90%EB%A6%AD%ED%84%B0.png?type=w580"
+                        class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">아냐</h5>
                         <p class="card-text">설명</p>
-                        <a href="#" id="btn1" class="btn btn-primary">상세보기</a>
+                        <button id="btn1" type="button" class="btn btn-primary">상세보기</button>
                     </div>
                 </div>
             </div>
@@ -218,7 +299,7 @@
                     <div class="card-body">
                         <h5 class="card-title">아냐</h5>
                         <p class="card-text">설명</p>
-                        <a href="#" id="btn2" class="btn btn-primary">상세보기</a>
+                        <button id="btn2" type="button" class="btn btn-primary">상세보기</button>
                     </div>
                 </div>
             </div>
@@ -228,7 +309,7 @@
                     <div class="card-body">
                         <h5 class="card-title">아냐</h5>
                         <p class="card-text">설명</p>
-                        <a href="#" id="btn3" class="btn btn-primary">상세보기</a>
+                        <button id="btn3" type="button" class="btn btn-primary">상세보기</button>
                     </div>
                 </div>
             </div>
@@ -238,7 +319,7 @@
                     <div class="card-body">
                         <h5 class="card-title">아냐</h5>
                         <p class="card-text">설명</p>
-                        <a href="#" id="btn4" class="btn btn-primary">상세보기</a>
+                        <button id="btn4" type="button" class="btn btn-primary">상세보기</button>
                     </div>
                 </div>
             </div>
@@ -248,18 +329,36 @@
                     <div class="card-body">
                         <h5 class="card-title">아냐</h5>
                         <p class="card-text">설명</p>
-                        <a href="#" id="btn5" class="btn btn-primary">상세보기</a>
+                        <button id="btn5" type="button" class="btn btn-primary">상세보기</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div id="profilbox_1" class="myprofilbox_1">
+
+    </div>
+    <div id="profilbox_2" class="myprofilbox_2">
+
+    </div>
+    <div id="profilbox_3" class="myprofilbox_3">
+
+    </div>
+    <div id="profilbox_4" class="myprofilbox_4">
+
+    </div>
+    <div id="profilbox_5" class="myprofilbox_5">
+
+    </div>
+
+
+
     <div class="tmibox">
         <div class="mytitle">
             <h1> * 친해져요 우리 * </h1>
         </div>
-<<<<<<< HEAD
+
         <div id="namebox" class="namebox">
             <div class="card-header">
             </div>
@@ -286,37 +385,6 @@
             </div>
         </div>
     </div>
-
-=======
-            <div id="namebox" class="namebox">
-                <div class="card-header">
-                </div>
-
-
-                <div id="" class="">
-
-                    <div class="card-write">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="닉네임" aria-label="Recipient's username"
-                                aria-describedby="button-addon2" id="name">
-                            <input type="text" class="form-control" placeholder="오늘의 TMI" aria-label="Recipient's username"
-                                aria-describedby="button-addon2" id="tmi">
-                            <button class="btn btn-outline-secondary" type="button" id="tmibtn">작성</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                        <p>
-                        </p>
-                        <footer class="blockquote-footer">닉네임 <cite title="Source Title">TMI</cite></footer>
-                    </blockquote>
-                </div>
-            </div>
->>>>>>> b58218ba706772ea0ce6f079286f5580299f605e
-
-
-
 
     </div>
     </div>
