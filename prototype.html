@@ -60,8 +60,8 @@
 
         .mytitle {
 
-            width: 40%;
-            height: 150px;
+            width: 30%;
+            height: 80px;
             margin: 20px auto 8px auto;
 
 
@@ -77,33 +77,9 @@
             justify-content: center;
             align-items: center;
         }
+       
 
-        .commentingbox {
-            max-width: 500px;
-            width: 95%;
-
-            margin: 20px auto 8px auto;
-
-            box-shadow: 0px 0px 3px 0px gray;
-            padding: 20px;
-
-            background-position: center;
-            background-size: cover;
-        }
-
-        .comment>textarea {
-
-            min-heightr: 50px;
-
-
-            margin: 20px auto 8px auto;
-
-
-            padding: 20px;
-
-            background-position: center;
-            background-size: cover;
-        }
+        
     </style>
     <script type="module">
         // Firebase SDK 라이브러리 가져오기
@@ -114,7 +90,7 @@
 
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-            apiKey: "AIzaSyBxkEL7CCF9LuLAguqvhE8aV-nkZQBXyrk",
+            apiKey: "AIzaSyBxkEL7CCF9LuLAguqvhE8aV-nkZQBXyrk",s
             authDomain: "miniproject-8259a.firebaseapp.com",
             projectId: "miniproject-8259a",
             storageBucket: "miniproject-8259a.appspot.com",
@@ -132,7 +108,7 @@
 
         $("#btn").click(async function () {
             let namelist = ["LGH", "PSY", "JGM", "LHW", "HNW"]
-            
+
 
 
             $('#postingbox').toggle();
@@ -216,20 +192,25 @@
 
 
 
-
-
-            <div id="postingbox" class="mypostingbox">
+            <div class="mytitle">
+                <h1> * 친해져요 우리 * </h1>
+            </div>
+            
+                <div id="postingbox" class="mypostingbox">
                 <div class="card-header">
                     <input type="email" class="form-control" placeholder="닉네임">
-                                </div>
+                </div>
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
                         <p><input type="email" class="form-control" placeholder="오늘의 TMI">
                             <button type="button" class="btn btn-secondary btn-sm">TMI</button>
                         </p>
-                        <footer class="blockquote-footer">닉네임  <cite title="Source Title">TMI</cite></footer>
+                        <footer class="blockquote-footer">닉네임 <cite title="Source Title">TMI</cite></footer>
                     </blockquote>
                 </div>
+            
+
+            
             </div>
 
 
@@ -239,27 +220,9 @@
         </div>
     </div>
 
-    <div class="mytitle">
-        <h1> * 친해져요 우리 * </h1>
-    </div>
 
-    <div class="commentingbox">
 
-        <div class="nickname url form-floating mb-3">
-            <input type="name" class="form-control" id="floatingurl" placeholder="닉네임">
-            <label for="floatingurl">닉네임</label>
-        </div>
-
-        <div class="comment form-floating mb-3">
-            <textarea class="form-control" placeholder="오늘의 TMI" id="오늘의 TMI"></textarea>
-            <label for="floatingurl">오늘의 TMI</label>
-        </div>
-
-        <div class="buttons">
-            <button type="button" class="btn btn-dark ">입력</button>
-        </div>
-
-    </div>
+    
 
 </body>
 
