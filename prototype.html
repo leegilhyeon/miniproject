@@ -12,7 +12,6 @@
 
 
     <style>
-
         .title {
             width: 500px;
             height: 110px;
@@ -26,9 +25,7 @@
 
         }
 
-        .img {
-
-        }
+        .img {}
 
         .teamname {
             float: right;
@@ -55,9 +52,57 @@
         .mypostingbox {
             width: 500px;
         }
-        .content{
+
+        .content {
             width: 70%;
             margin: 2% 0 0 15%;
+        }
+
+        .mytitle {
+
+            width: 40%;
+            height: 150px;
+            margin: 20px auto 8px auto;
+
+
+            background-image: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+
+            background-position: center;
+            background-size: cover;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .commentingbox {
+            max-width: 500px;
+            width: 95%;
+
+            margin: 20px auto 8px auto;
+
+            box-shadow: 0px 0px 3px 0px gray;
+            padding: 20px;
+
+            background-position: center;
+            background-size: cover;
+        }
+
+        .comment>textarea {
+
+            min-heightr: 50px;
+
+
+            margin: 20px auto 8px auto;
+
+
+            padding: 20px;
+
+            background-position: center;
+            background-size: cover;
         }
     </style>
     <script type="module">
@@ -185,6 +230,28 @@
 
 
         </div>
+    </div>
+
+    <div class="mytitle">
+        <h1> * 친해져요 우리 * </h1>
+    </div>
+
+    <div class="commentingbox">
+
+        <div class="nickname url form-floating mb-3">
+            <input type="name" class="form-control" id="floatingurl" placeholder="닉네임">
+            <label for="floatingurl">닉네임</label>
+        </div>
+
+        <div class="comment form-floating mb-3">
+            <textarea class="form-control" placeholder="오늘의 TMI" id="오늘의 TMI"></textarea>
+            <label for="floatingurl">오늘의 TMI</label>
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="btn btn-dark ">입력</button>
+        </div>
+
     </div>
 
 </body>
