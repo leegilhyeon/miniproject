@@ -57,6 +57,26 @@
             width: 70%;
             margin: 2% 0 0 15%;
         }
+
+        .mytitle {
+
+            width: 30%;
+            height: 80px;
+            margin: 20px auto 8px auto;
+
+
+            background-image: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+
+            background-position: center;
+            background-size: cover;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
     <script type="module">
         // Firebase SDK 라이브러리 가져오기
@@ -67,7 +87,7 @@
 
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-            apiKey: "AIzaSyBxkEL7CCF9LuLAguqvhE8aV-nkZQBXyrk",
+            apiKey: "AIzaSyBxkEL7CCF9LuLAguqvhE8aV-nkZQBXyrk", s
             authDomain: "miniproject-8259a.firebaseapp.com",
             projectId: "miniproject-8259a",
             storageBucket: "miniproject-8259a.appspot.com",
@@ -169,8 +189,14 @@
 
 
 
+            <div class="mytitle">
+                <h1> * 친해져요 우리 * </h1>
+            </div>
+            <p>
+            </p>
 
-
+            <div id="postingbox" class="mypostingbox">
+            </div>
             <div id="postingbox" class="mypostingbox">
 
                 <div class="card-write">
@@ -183,14 +209,20 @@
                     </div>
                 </div>
 
+                <div class="card-header">
 
+                </div>
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
                         <p>
                         </p>
-                        <footer class="blockquote-footer"> 닉네임 표시 <cite title="Source Title"> TMI내용 표시</cite></footer>
+                        <footer class="blockquote-footer"> 닉네임 표시 <cite title="Source Title"> TMI내용 표시</cite>
+                        </footer>
                     </blockquote>
                 </div>
+
+
+
             </div>
 
 
@@ -199,6 +231,10 @@
 
         </div>
     </div>
+
+
+
+
 
 </body>
 
