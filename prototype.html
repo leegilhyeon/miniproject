@@ -12,13 +12,19 @@
 
 
     <style>
+        .main {
+            background-color: #FFFFFF;
+            padding: 20px 70px 40px 70px;
+        }
+
         .title {
             width: 500px;
             height: 110px;
 
             color: white;
-            background-color: plum;
+            background-color: rgba(221, 170, 221, 0.973);
             text-align: center;
+            border-radius: 10px;
 
             padding: 30px 0px 30px 0px;
             margin: 50px auto 0px auto;
@@ -78,8 +84,9 @@
             align-items: center;
         }
 
-        .tmbox {
-            background-color: green;
+
+        .tmibox {
+            
 
 
         }
@@ -87,6 +94,11 @@
             width: 40%;
             margin: 0 auto;
             
+        }
+        .tmibox {
+            width: 1000px;
+            background-color: white;
+            margin: 0px auto 0px auto;
         }
     </style>
     <script type="module">
@@ -127,9 +139,12 @@
 
 
 <body style="overflow-x: hidden"> <!-- 가로 스크롤 삭제 -->
-    <div class="title">
-        <h1>빨리 친해지길 바래~</h1>
+    <div class="main">
+        <div class="title">
+            <h1>빨리 친해지길 바래~🌼</h1>
+        </div>
     </div>
+
     <div class="content">
         <img class="img"
             src="https://raw.githubusercontent.com/leegilhyeon/miniproject/8999c9ba6bcd3feb4df76fce63152a3c59a6ef4b/ddd.jpg"
@@ -199,6 +214,7 @@
             </div>
         </div>
     </div>
+
     <div class="tmibox">
         <div class="mytitle">
             <h1> * 친해져요 우리 * </h1>
@@ -228,6 +244,42 @@
                     </blockquote>
                 </div>
             </div>
+
+
+    <div class="mytitle">
+        <h1> * 친해져요 우리 * </h1>
+    </div>
+    <div id="" class="">
+        <div class="tmibox">
+            <div class="card-header">
+            </div>
+
+
+            <div id="" class="">
+
+                <div class="card-write">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="닉네임" aria-label="Recipient's username"
+                            aria-describedby="button-addon2" id="todos">
+                        <input type="text" class="form-control" placeholder="오늘의 TMI" aria-label="Recipient's username"
+                            aria-describedby="button-addon2" id="todos">
+                        <button class="btn btn-outline-secondary" type="button" id="tmibtn">작성</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                    </p>
+                    <footer class="blockquote-footer">닉네임 <cite title="Source Title">TMI</cite></footer>
+                </blockquote>
+            </div>
+        </div>
+
+    </div>
     </div>
 
 
