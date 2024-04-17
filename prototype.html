@@ -263,6 +263,8 @@
       import {
         doc,
         deleteDoc,
+        orderBy,
+        query,
       } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -353,26 +355,34 @@
           let tmi = $("#tmi").val();
 
           let doc = {
-            name: name,
+            name: name, //필드:변수
             tmi: tmi,
+            timestamp: new Date(),
           };
           await addDoc(collection(db, "miniproject"), doc);
           alert("저장완료!");
           window, location.reload();
         });
 
-        let docs = await getDocs(collection(db, "miniproject"));
+        let bo = (collection(db, "miniproject"))
+        let docs = await getDocs(query(bo, orderBy("timestamp", "desc")));
         docs.forEach((doc) => {
           let row = doc.data();
+          console.log(row);
           console.log(row);
           console.log(doc.id);
           let name = row["name"];
           let tmi = row["tmi"];
+          let time = row["timestamp"].toDate(); //row[row의 필드값]
+          console.log(time);
+          let year = time.getFullYear();
+          let month = time.getMonth() + 1; //ctrl+d 드래그 반복되는 여려개 바꾸기
+          let day = time.getDate();
 
           let temp_html = `
             <div class="card-body">
                 <blockquote class="blockquote mb-0">
-                    <footer class="blockquote-footer">${name}<span> :  </span><cite title="Source Title">${tmi}</cite></footer>
+                    <footer class="blockquote-footer">${name}<span> :  </span><cite title="Source Title">${tmi} ${year}-${month}-${day}</cite></footer>
                     <button id="trash"><i id="${doc.id}" class="fas fa-trash"></i></button>
 
                 </blockquote>
