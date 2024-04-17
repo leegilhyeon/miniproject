@@ -7,14 +7,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-        .card-body2{height: 500px;overflow:scroll;
-            margin-bottom: 100px; }
 
       .main {
         background-color: #ffffff;
@@ -23,11 +20,9 @@
       }
 
         .title {
-            
             width: 500px;
             height: 110px;
-            
-            font-family: "Jua", sans-serif;
+
             color: white;
             background-color: rgba(221, 170, 221, 0.973);
             text-align: center;
@@ -45,18 +40,18 @@
         vertical-align: bottom;
       }
 
-      .teamname {
-        font-family: "Jua", sans-serif;
-        float: right;
-        padding-left: 0%;
-      }
-
         .teamname {
-
-
+            
+            
             font-family: "Jua", sans-serif;
             float: right;
             padding-left: 0%;
+
+        }
+
+      .simoo {
+        color: rgb(119, 224, 189);
+      }
 
       .rules {
         color: rgb(119, 224, 189);
@@ -105,12 +100,12 @@
         width: 1000px;
         height: 500px;
 
-        align-content: center;
-        margin: 100px auto 0px auto;
-        border-radius: 10px;
-        border-style: solid;
-        border-color: blue;
-      }
+            align-content: center;
+            margin: 100px auto 0px auto;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: blue;
+        }
 
       .myprofilbox_4 {
         width: 1000px;
@@ -127,13 +122,12 @@
         width: 1000px;
         height: 500px;
 
-
-            margin: 100px auto 0px auto;
-            border-radius: 10px;
-            border-style: solid;
-            border-color: blue;
-
-        }
+        align-content: center;
+        margin: 100px auto 0px auto;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: black;
+      }
 
       .myprofilbox_1 > img {
         width: 300px;
@@ -165,11 +159,11 @@
         margin: 0 0 200px 50px;
       }
 
-      .proclose {
-        width: 100px;
-        margin-left: 45%;
-        border-radius: 5px;
-      }
+        .proclose {
+            width: 100px;
+            margin-left: 45%;
+            border-radius: 5px;
+        }
 
       .content {
         width: 55%;
@@ -183,17 +177,10 @@
 
         background-image: linear-gradient(35deg, #ccffff, #ffcccc);
 
-        .proclose {
-            width: 100px;
-            margin-left: 45%;
-            border-radius: 5px;           
-        }
+        background-position: center;
+        background-size: cover;
 
-
-        .content {
-            width: 55%;
-            margin: 2% 0 0 15%;
-        }
+        color: white;
 
         display: flex;
         flex-direction: column;
@@ -201,47 +188,18 @@
         align-items: center;
       }
 
-      .tmibox {
-      }
+        .tmibox {}
 
       .namebox {
         width: 40%;
         margin: 0 auto;
       }
 
-            background-image: linear-gradient(35deg, #CCFFFF, #FFCCCC);
-
-            background-position: center;
-            background-size: cover;
-
-            color: white;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        .namebox {
-            width: 40%;
-            margin: 0 auto;
-
-        }
-
         .tmibox {
             width: 1100px;
             background-color: white;
             margin: 0px auto 0px auto;
         }
-
-        .anchor {
-            width: 120px;
-            height: 40px;
-            margin-left: 90%;
-            border-radius: 5px;
-        }
-
     </style>
     <script type="module">
         // Firebase SDK 라이브러리 가져오기
@@ -249,22 +207,17 @@
         import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
         import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
         import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-        import {
-        doc,
-        deleteDoc,
-      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
-
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyBxkEL7CCF9LuLAguqvhE8aV-nkZQBXyrk",
-        sauthDomain: "miniproject-8259a.firebaseapp.com",
-        projectId: "miniproject-8259a",
-        storageBucket: "miniproject-8259a.appspot.com",
-        messagingSenderId: "196534650912",
-        appId: "1:196534650912:web:d1588f18793d1476e55445",
-        measurementId: "G-WLC85CK102",
-      };
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+        apiKey: "AIzaSyAET2FcfdvsXPzeXQy_YY9-XWMGrv9O_aY",
+        authDomain: "sparta-93efd.firebaseapp.com",
+        projectId: "sparta-93efd",
+        storageBucket: "sparta-93efd.appspot.com",
+        messagingSenderId: "717676499839",
+        appId: "1:717676499839:web:88d76d73adcadb5c46004a",
+        measurementId: "G-GTYDDEY3R6"
+        };
 
       // Firebase 인스턴스 초기화
       const app = initializeApp(firebaseConfig);
@@ -316,58 +269,20 @@
         $("#profilbox_5").slideToggle();
       });
 
-      $("#probtn").click(async function () {
-        $("#profilbox_1").hide();
-        $("#profilbox_2").hide();
-        $("#profilbox_3").hide();
-        $("#profilbox_4").hide();
-        $("#profilbox_5").hide();
-      });
-
-<<<<<<< HEAD
-        $("#probtn1").click(async function () {
-            $("#profilbox_1").slideToggle();
+        $("#probtn").click(async function () {
+            $("#profilbox_1").hide();
+            $("#profilbox_2").hide();
+            $("#profilbox_3").hide();
+            $("#profilbox_4").hide();
+            $("#profilbox_5").hide();
         })
 
-        $("#probtn2").click(async function () {
-            $("#profilbox_2").slideToggle();
-        })
-
-        $("#probtn3").click(async function () {
-            $("#profilbox_3").slideToggle();
-        })
-
-        $("#probtn4").click(async function () {
-            $("#profilbox_4").slideToggle();
-        })
-
-        $("#probtn5").click(async function () {
-            $("#profilbox_5").slideToggle();
-        })
-=======
       //TMI로그
       $("#tmibtn").click(async function () {
         let name = $("#name").val();
         let tmi = $("#tmi").val();
->>>>>>> 1d96df0c0470bcbc1bbd83bb566cca9924ea0f11
-
-        let doc = {
-          name: name,
-          tmi: tmi,
-        };
-        await addDoc(collection(db, "miniprojest"), doc);
-        alert("저장완료!");
-        window, location.reload();
-      });
-      $("#log").empty();
-      let docs = await getDocs(collection(db, "miniprojest"));
-      docs.forEach((doc) => {
-        let row = doc.data();
-        console.log(row);
-        let name = row["name"];
-        let tmi = row["tmi"];
-
-<<<<<<< HEAD
+        console.log($name);
+        console.log($tmi);
 
             let doc = {
                 'name': name,
@@ -377,67 +292,50 @@
             alert('저장완료!');
             window, location.reload();
         });
-        
+
         let docs = await getDocs(collection(db, "miniprojest"));
         docs.forEach((doc) => {
             let row = doc.data();
             console.log(row);
-            console.log(doc.id);
             let name = row['name'];
             let tmi = row['tmi'];
 
-            let temp_html = `
-=======
         let temp_html = `
->>>>>>> 1d96df0c0470bcbc1bbd83bb566cca9924ea0f11
             <div class="card-body">
                 <blockquote class="blockquote mb-0">
                     <footer class="blockquote-footer">${name}<span> :  </span><cite title="Source Title">${tmi}</cite></footer>
                     <button id="trash"><i class="fas fa-trash"></i></button>
                 </blockquote>
             </div>`;
-<<<<<<< HEAD
+
             $('#log').append(temp_html);
         });
-
         $(document).ready(function () {
-            $(".fa-trash").click(async function () {
-                console.log($(this));
-                $(this).parent().parent().empty();
-            });
+        $(".fa-trash").click(async function () {
+          console.log($(this));
+          $(this).parent().parent().empty();
         });
-
-=======
-
-        $("#log").append(temp_html);
       });
->>>>>>> 1d96df0c0470bcbc1bbd83bb566cca9924ea0f11
+
+
+
     </script>
   </head>
 
   <body>
     <div class="main">
-<<<<<<< HEAD
-        <div id="teamname_id" class="title">
+        <div class="title">
             <h1>빨리 친해지길 바래~🌼</h1>
         </div>
     </div>
 
-        <div class="anchor">
-          <div id="list-example" class="list-group">
-            <a class="list-group-item list-group-item-action" href="#teamname_id">팀 소개</a>
-            <a class="list-group-item list-group-item-action" href="#mycards_id">개인 프로필</a>
-            <a class="list-group-item list-group-item-action" href="#namebox">오늘의 TMI</a>
-          </div>
-        </div>
-
-    <div class="content">
+    <div class="content" >
         <img class="img"
             src="https://raw.githubusercontent.com/leegilhyeon/miniproject/8999c9ba6bcd3feb4df76fce63152a3c59a6ef4b/ddd.jpg"
             alt="">
-            
-        <span class="teamname" style="text-align: left;"> 
-            <h2 class="simoo">Team. 시무11조</h2>
+
+        <span class="teamname" style="text-align: left;">
+            <h2 class="simoo">Team.시무11조</h2>
             <li>팀 소개: 선택적 침묵하는 I 5명</li>
             <li>팀 목표: 포기하지말고 끝까지 수료하기</li>
             <li>팀 약속: 09:10 오늘 학습계획 공유하기
@@ -445,251 +343,95 @@
                     20:30 오늘 학습내용 공유하기</p>
 
             </li>
-            <h3 id="mycards_id" class="rules">팀 규칙</h3>
+            <h3 class="rules">팀 규칙</h3>
             <li>대답 꼭하기</li>
             <li>막히는 부분 있다면 물어보기</li>
         </span>
-        </div>
-        
-      <div class="mycards" style="text-align: center;">
+    </div>
+    <div class="mycards" style="text-align: center;">
         <div id="card" class="row row-cols-1 row-cols-md-5 g-5">
             <div class="col" style="width: 18rem;">
                 <div class="card h-100">
-                    <img src="https://github.com/leegilhyeon/miniproject/blob/main/%EC%9D%B4%EA%B8%B8%ED%98%84%20%ED%94%84%EB%A1%9C%ED%95%84.png?raw=true" width="238" height="238" class="card-img-top" alt="...">
+                    <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">이길현</h5>
-                        <p class="card-text">ISFP</p>
+                        <h5 class="card-title">아냐</h5>
+                        <p class="card-text">설명</p>
                         <button id="btn1" type="button" class="btn btn-primary">상세보기</button>
                     </div>
                 </div>
             </div>
             <div class="col" style="width: 18rem;">
                 <div class="card h-100">
-                    <img src="https://github.com/leegilhyeon/miniproject/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202024-04-17%20103120.png?raw=true" width="238" height="238" class="card-img-top" alt="...">
+                    <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">박승엽</h5>
-                        <p class="card-text">ISFP</p>
+                        <h5 class="card-title">아냐</h5>
+                        <p class="card-text">설명</p>
                         <button id="btn2" type="button" class="btn btn-primary">상세보기</button>
                     </div>
                 </div>
             </div>
             <div class="col" style="width: 18rem;">
                 <div class="card h-100">
-                    <img src="https://github.com/leegilhyeon/miniproject/blob/main/%EC%A1%B0%EA%B7%9C%EB%AF%BC%20%ED%94%84%EB%A1%9C%ED%95%84.png?raw=true" width="238" height="238" class="card-img-top" alt="...">
+                    <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">조규민</h5>
-                        <p class="card-text">INFJ</p>
-                        <div><button id="btn3" type="button" class="btn btn-primary">상세보기</button></div>
-                        
+                        <h5 class="card-title">아냐</h5>
+                        <p class="card-text">설명</p>
+                        <button id="btn3" type="button" class="btn btn-primary">상세보기</button>
                     </div>
                 </div>
             </div>
             <div class="col" style="width: 18rem;">
                 <div class="card h-100">
-                    <img src="https://github.com/leegilhyeon/miniproject/blob/main/%EC%9D%B4%ED%98%84%EC%9A%B0%20%ED%94%84%EB%A1%9C%ED%95%84.png?raw=true" width="238" height="238" class="card-img-top" alt="...">
+                    <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">이현우</h5>
-                        <p class="card-text">ISFJ</p>
+                        <h5 class="card-title">아냐</h5>
+                        <p class="card-text">설명</p>
                         <button id="btn4" type="button" class="btn btn-primary">상세보기</button>
                     </div>
                 </div>
             </div>
             <div class="col" style="width: 18rem;">
                 <div class="card h-100">
-                    <img src="https://github.com/leegilhyeon/miniproject/blob/main/%ED%99%A9%EB%82%A8%EC%9B%85%20%ED%94%84%EB%A1%9C%ED%95%84.png?raw=true" width="238" height="238" class="card-img-top" alt="...">
+                    <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">황남웅</h5>
-                        <p class="card-text">INTJ</p>
+                        <h5 class="card-title">아냐</h5>
+                        <p class="card-text">설명</p>
                         <button id="btn5" type="button" class="btn btn-primary">상세보기</button>
                     </div>
                 </div>
-=======
-      <div class="title">
-        <h1>빨리 친해지길 바래~🌼</h1>
-      </div>
-    </div>
-
-    <div class="content">
-      <img
-        class="img"
-        src="https://raw.githubusercontent.com/leegilhyeon/miniproject/8999c9ba6bcd3feb4df76fce63152a3c59a6ef4b/ddd.jpg"
-        alt=""
-      />
-
-      <span class="teamname" style="text-align: left">
-        <h2 class="simoo">Team.시무11조</h2>
-        <li>팀 소개: 선택적 침묵하는 I 5명</li>
-        <li>팀 목표: 포기하지말고 끝까지 수료하기</li>
-        <li>
-          팀 약속: 09:10 오늘 학습계획 공유하기
-          <p class="out">20:30 오늘 학습내용 공유하기</p>
-        </li>
-        <h3 class="rules">팀 규칙</h3>
-        <li>대답 꼭하기</li>
-        <li>막히는 부분 있다면 물어보기</li>
-      </span>
-    </div>
-    <div class="mycards" style="text-align: center">
-      <div id="card" class="row row-cols-1 row-cols-md-5 g-5">
-        <div class="col" style="width: 18rem">
-          <div class="card h-100">
-            <img
-              src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">아냐</h5>
-              <p class="card-text">설명</p>
-              <button id="btn1" type="button" class="btn btn-primary">
-                상세보기
-              </button>
->>>>>>> 1d96df0c0470bcbc1bbd83bb566cca9924ea0f11
             </div>
-          </div>
         </div>
-        <div class="col" style="width: 18rem">
-          <div class="card h-100">
-            <img
-              src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">아냐</h5>
-              <p class="card-text">설명</p>
-              <button id="btn2" type="button" class="btn btn-primary">
-                상세보기
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col" style="width: 18rem">
-          <div class="card h-100">
-            <img
-              src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">아냐</h5>
-              <p class="card-text">설명</p>
-              <button id="btn3" type="button" class="btn btn-primary">
-                상세보기
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col" style="width: 18rem">
-          <div class="card h-100">
-            <img
-              src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">아냐</h5>
-              <p class="card-text">설명</p>
-              <button id="btn4" type="button" class="btn btn-primary">
-                상세보기
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col" style="width: 18rem">
-          <div class="card h-100">
-            <img
-              src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">아냐</h5>
-              <p class="card-text">설명</p>
-              <button id="btn5" type="button" class="btn btn-primary">
-                상세보기
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div id="profilbox_1" class="myprofilbox_1">
-<<<<<<< HEAD
-        <img src="https://github.com/leegilhyeon/miniproject/blob/main/%EC%9D%B4%EA%B8%B8%ED%98%84%20%ED%94%84%EB%A1%9C%ED%95%84.png?raw=true" alt="..">
-        <div><button id="probtn1" class="proclose" type="button">닫기</button>
+        <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
+        <div><button id="probtn" class="proclose" type="button">닫기</button>
 
         </div>
     </div>
     <div id="profilbox_2" class="myprofilbox_2">
-        <img src="https://github.com/leegilhyeon/miniproject/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202024-04-17%20103120.png?raw=true" alt="..">
-        <div><button id="probtn2" class="proclose" type="button">닫기</button>
+        <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
+        <div><button id="probtn" class="proclose" type="button">닫기</button>
 
         </div>
     </div>
     <div id="profilbox_3" class="myprofilbox_3">
-        <img src="https://github.com/leegilhyeon/miniproject/blob/main/%EC%A1%B0%EA%B7%9C%EB%AF%BC%20%ED%94%84%EB%A1%9C%ED%95%84.png?raw=true" alt="..">
-        <div><button id="probtn3" class="proclose" type="button">닫기</button>
+        <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
+        <div><button id="probtn" class="proclose" type="button">닫기</button>
 
         </div>
     </div>
     <div id="profilbox_4" class="myprofilbox_4">
-        <img src="https://github.com/leegilhyeon/miniproject/blob/main/%EC%9D%B4%ED%98%84%EC%9A%B0%20%ED%94%84%EB%A1%9C%ED%95%84.png?raw=true" alt="..">
-        <div><button id="probtn4" class="proclose" type="button">닫기</button>
+        <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
+        <div><button id="probtn" class="proclose" type="button">닫기</button>
 
         </div>
     </div>
     <div id="profilbox_5" class="myprofilbox_5">
-        <img src="https://github.com/leegilhyeon/miniproject/blob/main/%ED%99%A9%EB%82%A8%EC%9B%85%20%ED%94%84%EB%A1%9C%ED%95%84.png?raw=true" alt="..">
-        <div><button id="probtn5" class="proclose" type="button">닫기</button>
+        <img src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large" alt="..">
+        <div><button id="probtn" class="proclose" type="button">닫기</button>
 
         </div>
-=======
-      <img
-        src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large"
-        alt=".."
-      />
-      <div>
-        <button id="probtn" class="proclose" type="button">닫기</button>
-      </div>
-    </div>
-    <div id="profilbox_2" class="myprofilbox_2">
-      <img
-        src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large"
-        alt=".."
-      />
-      <div>
-        <button id="probtn" class="proclose" type="button">닫기</button>
-      </div>
-    </div>
-    <div id="profilbox_3" class="myprofilbox_3">
-      <img
-        src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large"
-        alt=".."
-      />
-      <div>
-        <button id="probtn" class="proclose" type="button">닫기</button>
-      </div>
-    </div>
-    <div id="profilbox_4" class="myprofilbox_4">
-      <img
-        src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large"
-        alt=".."
-      />
-      <div>
-        <button id="probtn" class="proclose" type="button">닫기</button>
-      </div>
-    </div>
-    <div id="profilbox_5" class="myprofilbox_5">
-      <img
-        src="https://pbs.twimg.com/media/FSu6NP5UAAAyU6_.jpg:large"
-        alt=".."
-      />
-      <div>
-        <button id="probtn" class="proclose" type="button">닫기</button>
-      </div>
->>>>>>> 1d96df0c0470bcbc1bbd83bb566cca9924ea0f11
     </div>
 
     <div class="tmibox">
@@ -700,43 +442,8 @@
       <div id="namebox" class="namebox">
         <div class="card-header"></div>
 
-        <div id="" class="">
-          <div class="card-write">
-            <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="닉네임"
-                aria-label="Recipient's username"
-                aria-describedby="button-addon2"
-                id="name"
-              />
-              <input
-                type="text"
-                class="form-control"
-                placeholder="오늘의 TMI"
-                aria-label="Recipient's username"
-                aria-describedby="button-addon2"
-                id="tmi"
-              />
-              <button
-                class="btn btn-outline-secondary"
-                type="button"
-                id="tmibtn"
-              >
-                작성
-              </button>
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
-
-        <div id="namebox" class="namebox">
-            <div class="card-header">
-            </div>
-
-
             <div id="" class="">
+
                 <div class="card-write">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="닉네임" aria-label="Recipient's username"
@@ -747,31 +454,21 @@
                     </div>
                 </div>
             </div>
-            <div id="log" class="card-body2">
-
+            <div id="log" class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                    </p>
+                    <footer class="blockquote-footer">닉네임 <cite title="Source Title">TMI</cite></footer>
+                    <button id="trash"><i class="fas fa-trash"></i></button>
+                </blockquote>
             </div>
-=======
-        <div id="log" class="card-body">
-          <blockquote class="blockquote mb-0">
-            <p></p>
-            <footer class="blockquote-footer">
-              닉네임 <cite title="Source Title">TMI</cite>
-            </footer>
-            <button id="trash"><i class="fas fa-trash"></i></button>
-          </blockquote>
->>>>>>> 1d96df0c0470bcbc1bbd83bb566cca9924ea0f11
         </div>
-      </div>
     </div>
-<<<<<<< HEAD
 
-
+    </div>
+    </div>
 
 
 </body>
 
 </html>
-=======
-  </body>
-</html>
->>>>>>> 1d96df0c0470bcbc1bbd83bb566cca9924ea0f11
