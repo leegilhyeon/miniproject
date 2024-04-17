@@ -345,6 +345,7 @@
       });
 
       $("#probtn5").click(async function () {
+        // $는 검색 $(.class) ex)  $(.fa-trash)
         $("#profilbox_5").slideToggle();
       });
 
@@ -364,22 +365,22 @@
           window, location.reload();
         });
 
-        let bo = (collection(db, "miniproject"))
-        let docs = await getDocs(query(bo, orderBy("timestamp", "desc")));
+        let bo = collection(db, "miniproject");
+        let docs = await getDocs(query(bo, orderBy("timestamp", "desc"))); // getdocs에서 데이터 다 가져오는데 정렬하고 가져오고싶어서 Query함수를 씀
         docs.forEach((doc) => {
+          // query(collection(db, Docs(컬렉션)이름), 기준, limit(개수) ) **변수 선언할떄마다 consloe.log 해보기
           let row = doc.data();
-          console.log(row);
           console.log(row);
           console.log(doc.id);
           let name = row["name"];
           let tmi = row["tmi"];
-          let time = row["timestamp"].toDate(); //row[row의 필드값]
+          let time = row["timestamp"].toDate(); //row[row의 필드값]  toDate() 데이터의 type이 date로    alt마우스/ctrl+alt 멀티 커서 ctrl+e파일이름검색 ctrl+g 줄검색
           console.log(time);
           let year = time.getFullYear();
-          let month = time.getMonth() + 1; //ctrl+d 드래그 반복되는 여려개 바꾸기
-          let day = time.getDate();
+          let month = time.getMonth() + 1; //ctrl+d 드래그 반복되는 여려개 바꾸기   shift+alt 위아래 열 복사    ctrl+l 한줄단위 드래그  ctrl+enter 글자사이에서 줄내림가능
+          let day = time.getDate(); // #시작하면 id .으로 시작하면 class 변수를 문자열안에 넣고싶으면 `쓰고 ``안에서 ${} 변수 표시
 
-          let temp_html = `
+          let temp_html = `                     
             <div class="card-body">
                 <blockquote class="blockquote mb-0">
                     <footer class="blockquote-footer">${name}<span> :  </span><cite title="Source Title">${tmi} ${year}-${month}-${day}</cite></footer>
@@ -392,7 +393,7 @@
 
         $(document).on("click", ".fa-trash", async function () {
           let docId = $(this).attr("id") || "-";
-          await deleteDoc(doc(db, "miniproject", docId));
+                            await deleteDoc(doc(db, "miniproject", docId));
           $(this).parent().parent().parent().empty();
         });
       });
@@ -550,7 +551,7 @@
                       상세보기
                     </button>
                   </div>
-                </div>
+                </div> 
               </div>
             </div>
             <div class="col" style="width: 18rem">
