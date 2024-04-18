@@ -423,25 +423,16 @@
           buttonIndexList("#btn5", button_list);
         });
 
-        let name = $("#name").val();
-        let tmi = $("#tmi").val();
-
-        let doc = {
-          name: name, //필드:변수
-          tmi: tmi,
-          timestamp: new Date(),
-        };
-
         //TMI로그s
         $("#tmibtn").click(async function () {
-          // let name = $("#name").val();
-          // let tmi = $("#tmi").val();
+          let name = $("#name").val();
+          let tmi = $("#tmi").val();
 
-          // let doc = {
-          //   name: name, //필드:변수
-          //   tmi: tmi,
-          //   timestamp: new Date(),
-          // };
+          let doc = {
+            name: name, //필드:변수
+            tmi: tmi,
+            timestamp: new Date(),
+          };
           await addDoc(collection(db, "miniproject"), doc);
           alert("저장완료!");
           window, location.reload();
