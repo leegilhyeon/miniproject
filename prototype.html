@@ -382,11 +382,8 @@
 
           let temp_html = `                     
             <div class="card-body">
-                <blockquote class="blockquote mb-0">
                     <footer class="blockquote-footer">${name}<span> :  </span><cite title="Source Title">${tmi} ${year}-${month}-${day}</cite></footer>
                     <button id="trash"><i id="${doc.id}" class="fas fa-trash"></i></button>
-
-                </blockquote>
             </div>`;
           $("#log").append(temp_html);
         });
@@ -394,7 +391,7 @@
         $(document).on("click", ".fa-trash", async function () {
           let docId = $(this).attr("id") || "-";
                             await deleteDoc(doc(db, "miniproject", docId));
-          $(this).parent().parent().parent().empty();
+          $(this).parent().parent().empty();
         });
       });
     </script>
