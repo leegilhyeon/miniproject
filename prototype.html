@@ -391,7 +391,7 @@
         $(document).on("click", ".fa-trash", async function () {
           let docId = $(this).attr("id") || "-";
                             await deleteDoc(doc(db, "miniproject", docId));
-          $(this).parent().parent().empty();
+          $(this).parent().parent().remove();
         });
       });
     </script>
