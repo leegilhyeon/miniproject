@@ -277,6 +277,7 @@
       .card-write {
         margin-top: 20px;
       }
+
     </style>
     <script type="module">
       // Firebase SDK 라이브러리 가져오기
@@ -422,20 +423,35 @@
           buttonIndexList("#btn5", button_list);
         });
 
+        let name = $("#name").val();
+        let tmi = $("#tmi").val();
+
+        let doc = {
+          name: name, //필드:변수
+          tmi: tmi,
+          timestamp: new Date(),
+        };
+
         //TMI로그s
         $("#tmibtn").click(async function () {
-          let name = $("#name").val();
-          let tmi = $("#tmi").val();
+          // let name = $("#name").val();
+          // let tmi = $("#tmi").val();
 
-          let doc = {
-            name: name, //필드:변수
-            tmi: tmi,
-            timestamp: new Date(),
-          };
+          // let doc = {
+          //   name: name, //필드:변수
+          //   tmi: tmi,
+          //   timestamp: new Date(),
+          // };
           await addDoc(collection(db, "miniproject"), doc);
           alert("저장완료!");
           window, location.reload();
         });
+
+        $("#tmi").keydown(function(keyNum){
+          if(keyNum.keyCode == 13){
+            $("#tmibtn").click()
+          }
+        })
 
         //$("#btn1").click(async function () {
         //  let btn1 = $('#btn1');
